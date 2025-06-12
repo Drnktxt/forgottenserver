@@ -32,9 +32,11 @@ services:
       - "7172:7172" # Game port
     volumes:
       - tfs_data:/srv
+      - ./config/config.lua:/srv/config.lua
     depends_on:
       - mysql
 
 volumes:
   mysql_data:
   tfs_data:
+  
